@@ -11,6 +11,12 @@ namespace ai_betterbet.Controllers
             return View();
         }
 
+        [Route("Tests")]
+        public IActionResult Tests()
+        {
+            return View();
+        }
+
         [Route("healthcheck")]
         [Route("home/healthcheck")]
         public IActionResult Healtcheck(String mesage = MESSAGE_HEALTHY)
