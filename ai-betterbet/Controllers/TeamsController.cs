@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 /*
  * Provides control action over Teams
@@ -10,13 +13,30 @@ namespace ai_betterbet.Controllers
     [ApiController]
     public class TeamsController : ControllerBase
     {
-        public string [] getTeams()
+        //Routing examples
+        [HttpGet]
+        [HttpGet("all")]
+        [HttpGet("{teamName}/{country=Spain}")]
+        public string [] getTeams(string teamName, string country)
         {
-            return new[]
+
+            if (String.IsNullOrEmpty(teamName))
             {
+                return new[]
+                {
+                 $"Country: {country}",
                 "Real Madrid",
                 "FC Barcelona"
-            };
+                };
+            }
+            return ($"country:{country};"+teamName).Split(';');
         }
+        [HttpPost]
+        [HttpPost("createTeam")]
+        public string createTeam()
+        {
+            return "To be implemented yet";
+        }
+
     }
 }
