@@ -19,12 +19,29 @@ Technologies:
 - Angular/React as Frontend
   
 Tests Monster:
+ 
+ Unit tests
+ 
  - unit tests with xUnit and quality goal of 70% coverage
  - examples of TDD
+ 
+ Integration tests
+ 
  - integration tests with Postman and MVC Controllers
  - examples of contract testing
+ 
+ Non-functional tests
+ 
  - performance tests with JMeter
- - UI tests with groovy selenium and/or protractor
+ - security tests with Zap
+ - security manual examples against CSRF (Cross Site Request Forgery) and XSS
+ 
+ E2E Tests
+ 
+ - UI tests with groovy selenium and/or protractor for frontend
+ 
+ DevOps
+ 
  - test & deployment pipeline with Azure pipelines
       - including code coverage gates
       - including Nexus code quality score
