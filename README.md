@@ -7,9 +7,10 @@ What app does ?
   Bet analytics app gathers statistics about upcoming footbal matches and suggests most likely outcomes using predictive analytics.
     Statistics are retrieved from external system via API.
     Own API is exposed.
-  User can define leagues to watch.
-  User can walk through teams statistics.
-  User can pick teams for progression betting on draw events.
+    User can define leagues to watch.
+    User can walk through teams statistics.
+    User can pick teams for progression betting on draw events.
+    Data can be visualized with charts_studio online.
   
 Technologies:
 
