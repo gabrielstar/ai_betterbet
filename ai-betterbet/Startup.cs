@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,16 +29,17 @@ namespace ai_betterbet
                     name: "healthcheck",
                     template: "healtcheck",
                     defaults: new { controller = "Home", action = "healthcheck" });
-                
+
 
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
-           
+
                 //routing but with static files retrieval if extension exists - for SPA
                 routes.MapSpaFallbackRoute(
-                     name: "spa-fallback",
+                    name: "spa-fallback",
                     defaults: new { controller = "Home", action = "Index" });
+
             });
             //default
             app.Run(async (context) =>
