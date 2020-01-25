@@ -14,7 +14,7 @@ What app does ?
 Technologies:
 
 - Azure runtime
-- .NET Core 2.1 Web API
+- .NET Core 2.1 MVC SUite (MVC+Web API)
 - Angular/React as Frontend
   
 Tests Monster:
