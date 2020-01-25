@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing.Constraints;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ai_betterbet
@@ -22,7 +23,7 @@ namespace ai_betterbet
                 app.UseDeveloperExceptionPage();
             }
             app.UseStaticFiles();
-            //custom routes
+            //custom routes via Conventional routing
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
