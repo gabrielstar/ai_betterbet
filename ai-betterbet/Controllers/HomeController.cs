@@ -6,22 +6,30 @@ namespace ai_betterbet.Controllers
     public class HomeController : Controller
     {
         private const String MESSAGE_HEALTHY = "healthy";
+        /**
+         * Main Entry Page
+         */
         public IActionResult Index()
         {
             return View();
         }
-
+        /**
+         * Displays information about tests for the project
+         */
         [Route("Tests")]
         public IActionResult Tests()
         {
             return View();
         }
 
+        /**
+         * Simple "ping" endpoint
+         */
         [Route("healthcheck")]
         [Route("home/healthcheck")]
-        public IActionResult Healtcheck(String mesage = MESSAGE_HEALTHY)
+        public IActionResult Healtcheck(String message = MESSAGE_HEALTHY)
         {
-            return Content(MESSAGE_HEALTHY);
+            return Content(message);
         }
 
         [Route("ping")]

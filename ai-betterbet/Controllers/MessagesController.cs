@@ -23,6 +23,8 @@ namespace ai_betterbet.Controllers
                     $"\nPostman API tests: {_PostmanTestsURL}";
                 }
         }
+        [HttpGet]
+        [HttpGet("info")]
         public string GetMessages()
         {
             return this.GitHubURL;
