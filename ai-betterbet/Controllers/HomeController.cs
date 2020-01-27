@@ -3,6 +3,10 @@ using System;
 
 namespace ai_betterbet.Controllers
 {
+ 
+    /**
+     * Main Controller
+     **/
     public class HomeController : Controller
     {
         private const String MESSAGE_HEALTHY = "healthy";
@@ -22,10 +26,9 @@ namespace ai_betterbet.Controllers
             return View();
         }
 
-        ///
-        ///<summary>Simple "ping" endpoint used to check if app is up from the monitoring system</summary>
-        ///
-        ///
+        /**
+         * Endpoint for healthcheck from monitoring systems 
+         **/
         [Route("healthcheck")]
         [Route("home/healthcheck")]
         public IActionResult Healtcheck(String message = MESSAGE_HEALTHY)
@@ -33,6 +36,9 @@ namespace ai_betterbet.Controllers
             return Content(message);
         }
 
+        /**
+         * Alias to Healthcheck
+         **/
         [Route("ping")]
         public IActionResult Ping()
         {

@@ -1,13 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-/*
- * Provides control action over Teams
- */
-namespace ai_betterbet.Controllers
+﻿namespace ai_betterbet.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using System;
+
     /// <summary>
     /// Class provides entry point for Teams Management
     /// This class is an example of commenting code
@@ -16,11 +11,8 @@ namespace ai_betterbet.Controllers
     [ApiController]
     public class TeamsController : ControllerBase
     {
-        /**
-         * Routing examples
-         **/
         /// <summary>
-        ///     Method to search for teams
+        /// Method to search for teams
         /// </summary>
         /// <param name="teamName">Name of team</param>
         /// <param name="country">Country of team</param>
@@ -40,18 +32,15 @@ namespace ai_betterbet.Controllers
                 "FC Barcelona"
                 };
             }
-            return ($"country:{country};"+teamName).Split(';');
+            return ($"country:{country};" + teamName).Split(';');
         }
+
         /// <summary>
         /// Creates new team
         /// </summary>
         /// <returns>Message if team was created</returns>
         [HttpPost]
         [HttpPost("createTeam")]
-        public string createTeam()
-        {
-            return "To be implemented yet";
-        }
-
+        public string CreateTeam() => "To be implemented yet";
     }
 }

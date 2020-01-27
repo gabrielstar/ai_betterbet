@@ -13,7 +13,7 @@ namespace XUnitTestsAiBetterBet
             TeamsController teamsController = new TeamsController();
             const string ToBeImplementedMessage = "To be implemented yet";
             //act
-            String message = teamsController.createTeam();
+            String message = teamsController.CreateTeam();
             //assert
             Assert.Equal(ToBeImplementedMessage, message);
         }
