@@ -1,11 +1,11 @@
+using ai_betterbet.Controllers;
 using System;
 using Xunit;
-using ai_betterbet.Controllers;
+
 namespace XUnitTestsAiBetterBet
 {
     public class TeamsControllerTests
     {
- 
         [Fact]
         public void IsMessageReturnedToBeImplemented()
         {

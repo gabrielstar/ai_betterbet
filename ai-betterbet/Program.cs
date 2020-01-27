@@ -1,22 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-
-namespace ai_betterbet
+﻿namespace ai_betterbet
 {
+    using Microsoft.AspNetCore;
+    using Microsoft.AspNetCore.Hosting;
+
+    /// <summary>
+    /// Defines the <see cref="Program" />
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// The Main
+        /// </summary>
+        /// <param name="args">The args<see cref="string[]"/></param>
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
         }
 
+        /// <summary>
+        /// The CreateWebHostBuilder
+        /// </summary>
+        /// <param name="args">The args<see cref="string[]"/></param>
+        /// <returns>The <see cref="IWebHostBuilder"/></returns>
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();

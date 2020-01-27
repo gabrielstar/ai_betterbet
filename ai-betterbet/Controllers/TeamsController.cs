@@ -12,17 +12,16 @@
     public class TeamsController : ControllerBase
     {
         /// <summary>
-        /// Method to search for teams
+        /// The GetTeams - searches for teams by name and country
         /// </summary>
-        /// <param name="teamName">Name of team</param>
-        /// <param name="country">Country of team</param>
-        /// <returns>Array of Teams</returns>
+        /// <param name="teamName">The teamName<see cref="string"/></param>
+        /// <param name="country">The country<see cref="string"/></param>
+        /// <returns>array of teams</returns>
         [HttpGet]
         [HttpGet("all")]
         [HttpGet("{teamName}/{country=Spain}")]
         public string[] GetTeams(string teamName, string country)
         {
-
             if (String.IsNullOrEmpty(teamName))
             {
                 return new[]
@@ -36,9 +35,9 @@
         }
 
         /// <summary>
-        /// Creates new team
+        /// The CreateTeam
         /// </summary>
-        /// <returns>Message if team was created</returns>
+        /// <returns>The <see cref="string"/></returns>
         [HttpPost]
         [HttpPost("createTeam")]
         public string CreateTeam() => "To be implemented yet";

@@ -18,9 +18,11 @@ namespace ai_betterbet.Controllers
                     $"\nPostman API tests: {_PostmanTestsURL}";
             }
         }
+
         /**
          * Returns default message
          **/
+
         [HttpGet]
         [HttpGet("info")]
         public string GetMessages()

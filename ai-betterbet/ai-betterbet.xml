@@ -4,6 +4,10 @@
         <name>x`</name>
     </assembly>
     <members>
+        <member name="T:ai_betterbet.Controllers.HomeController">
+             Main Controller
+            
+        </member>
         <member name="M:ai_betterbet.Controllers.HomeController.Index">
             Main Entry Page
         </member>
@@ -11,26 +15,36 @@
             Displays information about tests for the project
         </member>
         <member name="M:ai_betterbet.Controllers.HomeController.Healtcheck(System.String)">
+             Endpoint for healthcheck from monitoring systems
             
-            <summary>Simple "ping" endpoint used to check if app is up from the monitoring system</summary>
+        </member>
+        <member name="M:ai_betterbet.Controllers.HomeController.Ping">
+             Alias to Healthcheck
             
+        </member>
+        <member name="M:ai_betterbet.Controllers.MessagesController.GetMessages">
+             Returns default message
             
+        </member>
+        <member name="T:ai_betterbet.Controllers.TeamsController">
+            <summary>
+            Class provides entry point for Teams Management
+            This class is an example of commenting code
+            </summary>
         </member>
         <member name="M:ai_betterbet.Controllers.TeamsController.GetTeams(System.String,System.String)">
-             Routing examples
-            
             <summary>
-                Method to search for teams
+            The GetTeams - searches for teams by name and country
             </summary>
-            <param name="teamName">Name of team</param>
-            <param name="country">Country of team</param>
-            <returns>Array of Teams</returns>
+            <param name="teamName">The teamName<see cref="T:System.String"/></param>
+            <param name="country">The country<see cref="T:System.String"/></param>
+            <returns>array of teams</returns>
         </member>
-        <member name="M:ai_betterbet.Controllers.TeamsController.createTeam">
+        <member name="M:ai_betterbet.Controllers.TeamsController.CreateTeam">
             <summary>
-            Creates new team
+            The CreateTeam
             </summary>
-            <returns>Message if team was created</returns>
+            <returns>The <see cref="T:System.String"/></returns>
         </member>
     </members>
 </doc>
