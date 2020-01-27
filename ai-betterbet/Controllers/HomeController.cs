@@ -22,9 +22,10 @@ namespace ai_betterbet.Controllers
             return View();
         }
 
-        /**
-         * Simple "ping" endpoint
-         */
+        ///
+        ///<summary>Simple "ping" endpoint used to check if app is up from the monitoring system</summary>
+        ///
+        ///
         [Route("healthcheck")]
         [Route("home/healthcheck")]
         public IActionResult Healtcheck(String message = MESSAGE_HEALTHY)

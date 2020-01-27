@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>x`</name>
+    </assembly>
+    <members>
+        <member name="M:ai_betterbet.Controllers.HomeController.Index">
+            Main Entry Page
+        </member>
+        <member name="M:ai_betterbet.Controllers.HomeController.Tests">
+            Displays information about tests for the project
+        </member>
+        <member name="M:ai_betterbet.Controllers.HomeController.Healtcheck(System.String)">
+            
+            <summary>Simple "ping" endpoint used to check if app is up from the monitoring system</summary>
+            
+            
+        </member>
+        <member name="M:ai_betterbet.Controllers.TeamsController.GetTeams(System.String,System.String)">
+             Routing examples
+            
+            <summary>
+                Method to search for teams
+            </summary>
+            <param name="teamName">Name of team</param>
+            <param name="country">Country of team</param>
+            <returns>Array of Teams</returns>
+        </member>
+        <member name="M:ai_betterbet.Controllers.TeamsController.createTeam">
+            <summary>
+            Creates new team
+            </summary>
+            <returns>Message if team was created</returns>
+        </member>
+    </members>
+</doc>
