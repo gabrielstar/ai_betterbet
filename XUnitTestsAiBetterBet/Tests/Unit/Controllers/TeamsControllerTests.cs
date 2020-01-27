@@ -4,18 +4,18 @@ using Xunit;
 
 namespace XUnitTestsAiBetterBet
 {
-    public class TeamsControllerTests
+    public class MessagesControllerTests
     {
         [Fact]
-        public void IsMessageReturnedToBeImplemented()
+        public void MessageContainsGithubURL()
         {
             //arrange
-            TeamsController teamsController = new TeamsController();
-            const string ToBeImplementedMessage = "To be implemented yet";
+            MessagesController messagesController = new MessagesController();
+            const string githubURL = "https://github.com";
             //act
-            String message = teamsController.CreateTeam();
+            string message = messagesController.GetMessages();
             //assert
-            Assert.Equal(ToBeImplementedMessage, message);
+            Assert.Contains(githubURL, message);
         }
     }
 }
