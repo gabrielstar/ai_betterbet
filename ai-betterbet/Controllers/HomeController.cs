@@ -9,10 +9,13 @@ namespace ai_betterbet.Controllers
 
     public class HomeController : Controller
     {
-        private const String MESSAGE_HEALTHY = "healthy";
+       
+
+        public static string MESSAGE_HEALTHY => "healthy";
+
         /**
-         * Main Entry Page
-         */
+* Main Entry Page
+*/
 
         public IActionResult Index()
         {
@@ -35,8 +38,12 @@ namespace ai_betterbet.Controllers
 
         [Route("healthcheck")]
         [Route("home/healthcheck")]
-        public IActionResult Healtcheck(String message = MESSAGE_HEALTHY)
+        public IActionResult Healtcheck(string message = "")
         {
+            if (string.IsNullOrEmpty(message))
+            {
+                message = MESSAGE_HEALTHY;
+            }
             return Content(message);
         }
 
