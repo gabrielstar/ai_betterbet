@@ -9,9 +9,6 @@
     {
         private const string CREATED_MESSAGE = "created";
 
-        public string CreateTeam()
-        {
-            return CREATED_MESSAGE;
-        }
+        public string CreateTeam() => CREATED_MESSAGE;
     }
 }

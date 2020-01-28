@@ -1,25 +1,40 @@
 using ai_betterbet.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace XUnitTestsAiBetterBet
 {
-    public class HomeControllerTests
+    public class HomeControllerTests : IDisposable
     {
-        //arange
-        readonly HomeController homeController = new HomeController();
+        private readonly HomeController homeController;
+
+        //setup
+        /// <summary>
+        /// xunit will create new test class for every test in class
+        /// so setUp and clean is not necessary here but it presents use-case
+        /// </summary>
+        public HomeControllerTests()
+        {
+            homeController = new HomeController();
+        }
+
+        //clean
+        public void Dispose()
+        {
+            homeController.Dispose();
+        }
 
         [Fact]
-        public void  Index_Returns_ViewResult()
+        public void Index_Returns_ViewResult()
         {
-            //arrange            
+            //arrange
             //act
             var result = homeController.Index();
             //assert
             Assert.IsType<ViewResult>(result);
         }
+
         [Fact]
         public void Test_Returns_ViewResult()
         {
@@ -27,8 +42,9 @@ namespace XUnitTestsAiBetterBet
             //act
             var result = homeController.Tests();
             //assert
-           Assert.IsType<ViewResult>(result);
+            Assert.IsType<ViewResult>(result);
         }
+
         [Fact]
         public void Ping_Returns_Healtcheck_Default_Message()
         {
@@ -50,7 +66,7 @@ namespace XUnitTestsAiBetterBet
             var result = homeController.Healtcheck(message);
             //assert
             var contentResult = Assert.IsType<ContentResult>(result);
-            Assert.Equal(contentResult.Content,message);
+            Assert.Equal(contentResult.Content, message);
         }
 
         [Fact]
@@ -63,6 +79,5 @@ namespace XUnitTestsAiBetterBet
             var contentResult = Assert.IsType<ContentResult>(result);
             Assert.Equal(contentResult.Content, defaultMessage);
         }
-
     }
 }
