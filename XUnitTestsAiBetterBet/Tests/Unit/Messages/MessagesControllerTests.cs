@@ -52,7 +52,7 @@ namespace XUnitTestsAiBetterBet
         public void MessageContainsGithubURL()
         {
             //arrange
-            string githubURL = fileReaderFixture.Urls.First();
+            string githubURL = fileReaderFixture.Urls.FirstOrDefault();
             //act
             string message = messagesController.GetMessages();
             //assert

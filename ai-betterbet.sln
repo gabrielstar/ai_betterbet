@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ai-betterbet", "ai-betterbet\ai-betterbet.csproj", "{BBD2071A-F9D5-4DED-B1FE-63BD119B3121}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestsAiBetterBet", "XUnitTestsAiBetterBet\XUnitTestsAiBetterBet.csproj", "{6DF53B7C-CDF5-4322-B1FC-9D187025627F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ai-betterbet-tests", "XUnitTestsAiBetterBet\ai-betterbet-tests.csproj", "{6DF53B7C-CDF5-4322-B1FC-9D187025627F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
