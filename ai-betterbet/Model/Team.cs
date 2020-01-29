@@ -7,7 +7,7 @@ namespace ai_betterbet.Model
 {
     public class Team
     {
-        public Team(int iD, string name, string leagues)
+        public Team(int iD, string name, string league)
         {
             ID = iD;
             Name = name;
