@@ -7,6 +7,13 @@ namespace ai_betterbet.Model
 {
     public class Team
     {
+        public Team(int iD, string name, string leagues)
+        {
+            ID = iD;
+            Name = name;
+            League = league;
+        }
+
         public int ID { get; set;}
         public string Name { get; set; }
         public string League { get; set; }
