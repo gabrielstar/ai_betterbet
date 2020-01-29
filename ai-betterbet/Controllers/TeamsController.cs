@@ -1,5 +1,6 @@
 ﻿namespace ai_betterbet.Controllers
 {
+    using ai_betterbet.Model;
     using ai_betterbet.Repositories;
     using Microsoft.AspNetCore.Mvc;
     using System;
@@ -12,9 +13,9 @@
     [ApiController]
     public class TeamsController : ControllerBase
     {
-        private readonly ITeamsRepository _teamsRepository;
+        private readonly IRepository<Team> _teamsRepository;
 
-        public TeamsController(ITeamsRepository teamsRepository)
+        public TeamsController(IRepository<Team> teamsRepository)
         {
             _teamsRepository = teamsRepository;
         }
@@ -47,6 +48,6 @@
         /// <returns>The <see cref="string"/></returns>
         [HttpPost]
         [HttpPost("createTeam")]
-        public string CreateTeam() => _teamsRepository.CreateTeam();
+        public string CreateTeam() => _teamsRepository.Create();
     }
 }

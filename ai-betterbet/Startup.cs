@@ -1,5 +1,6 @@
 ﻿namespace ai_betterbet
 {
+    using ai_betterbet.Model;
     using ai_betterbet.Repositories;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -20,7 +21,7 @@
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<ITeamsRepository,TeamsRepository>();
+            services.AddSingleton<IRepository<Team>,TeamsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
