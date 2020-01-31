@@ -28,6 +28,7 @@ namespace XUnitTestsAiBetterBet
                 Assert.Equal(DEFAULT_TEAMS_NUMBER, count);
             }
         }
+
         public class TeamsRepositoryTestsWithNonDefaultTeamsList
         {
             private readonly IRepository<Team> teamsRepository;
@@ -36,7 +37,6 @@ namespace XUnitTestsAiBetterBet
             {
                 teamsRepository = new TeamsRepository();
                 teamsRepository.DeleteAll();
-                
             }
 
             [Fact]
@@ -48,11 +48,12 @@ namespace XUnitTestsAiBetterBet
                 //assert
                 Assert.Equal(0, count);
             }
+
             [Fact]
             public void ListOfTeamsHas1ElementAfterAddingOne()
             {
                 //arrange
-                teamsRepository.Create(new Team(1,"Team","League"));
+                teamsRepository.Create(new Team(1, "Team", "League", 100.0m));
                 //act
                 int count = teamsRepository.GetAll().Count();
                 //assert

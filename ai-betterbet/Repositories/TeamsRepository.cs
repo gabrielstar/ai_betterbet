@@ -3,18 +3,10 @@ using System.Collections.Generic;
 
 namespace ai_betterbet.Repositories
 {
-    public interface IRepository<T>
-    {
-        string Create();
-        string Create(T element);
-        List<T> GetAll();
-        List<T> GetAllByID(int ID);
-        void DeleteAll();
-    }
 
     public class TeamsRepository : IRepository<Team>
     {
-        private List<Team> teams = new List<Team>();
+        private readonly List<Team> teams = new List<Team>();
         private const string CREATED_MESSAGE = "created";
         public TeamsRepository()
         {
@@ -35,13 +27,13 @@ namespace ai_betterbet.Repositories
 
         public List<Team> GetAllByID(int ID)
         {
-            throw new System.NotImplementedException();
+            return teams;
         }
 
         private  void InitTeams()
         {
-            teams.Add(new Team(1, "Real Madrid", "Primera Division"));
-            teams.Add(new Team(2, "FC Barcelona", "Primera Division"));
+            teams.Add(new Team(1, "Real Madrid", "Primera Division", 100.0m));
+            teams.Add(new Team(2, "FC Barcelona", "Primera Division",50.5m));
         }
 
         public void DeleteAll()

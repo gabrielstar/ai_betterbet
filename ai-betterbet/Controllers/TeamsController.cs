@@ -2,6 +2,7 @@
 {
     using ai_betterbet.Model;
     using ai_betterbet.Repositories;
+    using ai_betterbet.Services;
     using Microsoft.AspNetCore.Mvc;
     using System;
 
@@ -13,11 +14,11 @@
     [ApiController]
     public class TeamsController : ControllerBase
     {
-        private readonly IRepository<Team> _teamsRepository;
+        private readonly ITeamsService<Team> _teamsService;
 
-        public TeamsController(IRepository<Team> teamsRepository)
+        public TeamsController(ITeamsService<Team> teamsService)
         {
-            _teamsRepository = teamsRepository;
+            _teamsService = teamsService;
         }
         /// <summary>
         /// The GetTeams - searches for teams by name and country
@@ -48,6 +49,10 @@
         /// <returns>The <see cref="string"/></returns>
         [HttpPost]
         [HttpPost("createTeam")]
-        public string CreateTeam() => _teamsRepository.Create();
+        public string CreateTeam() => _teamsService.Create();
+
+        [HttpGet]
+        [HttpPost("sum")]
+        public int GetIDSum() => _teamsService.GetIDSum();
     }
 }
