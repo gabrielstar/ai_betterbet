@@ -13,6 +13,7 @@ namespace ai_betterbet.Services
     public interface ITeamsService<Team> : IRepository<Team>
     {
         int GetIDSum();
+
         decimal GetRichTeamsBudget(List<Team> teams);
     }
 
@@ -22,12 +23,13 @@ namespace ai_betterbet.Services
     /// </summary>
     public class TeamsService : TeamsRepository, ITeamsService<Team>
     {
-        readonly IFinancialService financialService;
+        private readonly IFinancialService financialService;
 
         public TeamsService(IFinancialService financialService)
         {
             this.financialService = financialService;
         }
+
         public int GetIDSum()
         {
             int sum = 0;
@@ -44,7 +46,7 @@ namespace ai_betterbet.Services
 
         public decimal GetRichTeamsBudget(List<Team> teams)
         {
-            return financialService.GetRichTeams(teams).Sum(team=>team.Budget);
+            return financialService.GetRichTeams(teams).Sum(team => team.Budget);
         }
     }
 }
