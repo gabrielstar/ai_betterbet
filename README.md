@@ -1,5 +1,5 @@
 # ai_betterbet
-This is bet analytics application  with JS and .NET Core 2.1. It is a DEMO app to showcase various types of testing and deployments in Azure.
+This is bet analytics application  with JS and .NET Core 2.1. It is a DEMO app to showcase various types of testing and deployments (pipeline) in Azure.
 
 Features:
 
@@ -15,19 +15,21 @@ What app does ?
 Technologies:
 
 - Azure runtime
-- .NET Core 2.1 MVC SUite (MVC+Web API)
-- Angular/React as Frontend
+- .NET Core 2.1.1 MVC SUite (MVC+Web API)
+-  Angular/React as Frontend
   
-Tests Monster:
+Tests:
  
  Unit tests
  
  - unit tests with xUnit and quality goal of 70% coverage
+ - unit testing of services, repositories, controllers
  - examples of TDD
  
  Integration tests
  
- - integration tests with Postman and MVC Controllers
+ - integration tests with Postman
+ - integration tests with Microsoft.AspNetCore.Mvc.Testing
  - examples of contract testing
  
  Non-functional tests
