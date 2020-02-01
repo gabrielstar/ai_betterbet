@@ -19,7 +19,7 @@ namespace XUnitTestsAiBetterBet
         {
             try
             {
-                Urls = System.IO.File.ReadAllLines(@$"{URLS_FILE_PATH}\{URLS_FILE_NAME}"); //no escape chars
+                Urls = System.IO.File.ReadAllLines($@"{URLS_FILE_PATH}\{URLS_FILE_NAME}"); //no escape chars
             }
             catch (Exception)
             {
