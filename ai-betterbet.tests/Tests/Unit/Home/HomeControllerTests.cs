@@ -13,6 +13,8 @@ namespace ai_betterbet_tests
     {
         private readonly HomeController homeController;
 
+        private readonly List<Team> testTeamsList;
+
         //setup
         /// <summary>
         /// xunit will create new test class for every test in class
@@ -20,10 +22,12 @@ namespace ai_betterbet_tests
         /// </summary>
         public HomeControllerTests()
         {
+            //Given:
+            //arrange dependencies
+            testTeamsList = new List<Team> { new Team(1, "Valencia FC", "Primera Division", 200.0m) };
             var mockTeamRepo = new Mock<IRepository<Team>>();
             mockTeamRepo.Setup(repo => repo.GetAll())
-                .Returns(new List<Team> { new Team(1, "Valencia FC", "Primera Division", 200.0m) });
-
+                .Returns(testTeamsList);
             homeController = new HomeController(mockTeamRepo.Object);
         }
 
@@ -34,13 +38,21 @@ namespace ai_betterbet_tests
         }
 
         [Fact]
-        public void Index_Returns_ViewResult()
+        public void Index_Returns_ViewResult_WithAList_OfTeams()
         {
-            //arrange - see Constructor                
+            //Given: HomeController dependency is set testTeamList
+            //arrange - see Constructor
+            //When: Index method is called and View retured
             //act
             var result = homeController.Index();
+            //Then:
             //assert
-            Assert.IsType<ViewResult>(result);
+            //View is of ViewResult type
+            var viewResult = Assert.IsType<ViewResult>(result);
+            //And Data available for View as Model is of List<Team> type or derived
+            var viewModel = Assert.IsAssignableFrom<List<Team>>(viewResult.ViewData.Model);
+            //And List is of size testTeamList.Count
+            Assert.Equal(testTeamsList.Count, viewModel.Count);
         }
 
         [Fact]
