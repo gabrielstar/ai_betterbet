@@ -3,7 +3,7 @@ using ai_betterbet.Repositories;
 using System.Linq;
 using Xunit;
 
-namespace XUnitTestsAiBetterBet
+namespace ai_betterbet_tests
 {
     public class TeamsRepositoryTests
     {

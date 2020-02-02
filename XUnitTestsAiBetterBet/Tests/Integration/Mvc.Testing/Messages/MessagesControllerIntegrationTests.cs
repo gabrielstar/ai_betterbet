@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace XUnitTestsAiBetterBet
+namespace ai_betterbet_tests
 {
     /// <summary>
     /// For integration tests we provide context of our running application

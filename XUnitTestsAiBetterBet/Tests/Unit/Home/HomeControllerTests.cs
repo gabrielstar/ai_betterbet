@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using Xunit;
 
-namespace XUnitTestsAiBetterBet
+namespace ai_betterbet_tests
 {
     public class HomeControllerTests : IDisposable
     {

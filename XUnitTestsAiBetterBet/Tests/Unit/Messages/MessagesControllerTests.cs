@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using Xunit;
 
-namespace XUnitTestsAiBetterBet
+namespace ai_betterbet_tests
 {
     /// <summary>
     /// File reading is an IO operation so we want to do it once for all tests

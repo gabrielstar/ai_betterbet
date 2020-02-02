@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace XUnitTestsAiBetterBet
+namespace ai_betterbet_tests
 {
     public class FinancialServiceTest
     {

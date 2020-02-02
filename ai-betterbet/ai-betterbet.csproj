@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <AssemblyName>x`</AssemblyName>
+    <AssemblyName>AI-betterbet</AssemblyName>
     <RootNamespace>ai_betterbet</RootNamespace>
   </PropertyGroup>
 

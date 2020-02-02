@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Xunit;
 using static ai_betterbet.Services.FinancialService;
 
-namespace XUnitTestsAiBetterBet
+namespace ai_betterbet_tests
 {
     public class TeamsServiceTests
     {
