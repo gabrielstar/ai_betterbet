@@ -1,6 +1,10 @@
 using ai_betterbet.Controllers;
+using ai_betterbet.Model;
+using ai_betterbet.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Moq;
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace ai_betterbet_tests
@@ -16,7 +20,11 @@ namespace ai_betterbet_tests
         /// </summary>
         public HomeControllerTests()
         {
-            homeController = new HomeController();
+            var mockTeamRepo = new Mock<IRepository<Team>>();
+            mockTeamRepo.Setup(repo => repo.GetAll())
+                .Returns(new List<Team> { new Team(1, "Valencia FC", "Primera Division", 200.0m) });
+
+            homeController = new HomeController(mockTeamRepo.Object);
         }
 
         //clean
@@ -28,7 +36,7 @@ namespace ai_betterbet_tests
         [Fact]
         public void Index_Returns_ViewResult()
         {
-            //arrange
+            //arrange - see Constructor                
             //act
             var result = homeController.Index();
             //assert

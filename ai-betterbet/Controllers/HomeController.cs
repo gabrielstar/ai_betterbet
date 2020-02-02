@@ -27,6 +27,7 @@ namespace ai_betterbet.Controllers
 
         public IActionResult Index()
         {
+            //making it more generic by using interface
             IEnumerable<Team> teams = teamRepository.GetAll();
             return View(teams);
         }
