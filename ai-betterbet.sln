@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AI-betterbet", "ai-betterbet\AI-betterbet.csproj", "{BBD2071A-F9D5-4DED-B1FE-63BD119B3121}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AI-betterbet.Tests", "XUnitTestsAiBetterBet\AI-betterbet.Tests.csproj", "{6DF53B7C-CDF5-4322-B1FC-9D187025627F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AI-betterbet.Tests", "ai-betterbet.tests\AI-betterbet.Tests.csproj", "{BF21F3D7-2DB7-4724-99B5-D38F23F55B13}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{BBD2071A-F9D5-4DED-B1FE-63BD119B3121}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBD2071A-F9D5-4DED-B1FE-63BD119B3121}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBD2071A-F9D5-4DED-B1FE-63BD119B3121}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6DF53B7C-CDF5-4322-B1FC-9D187025627F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DF53B7C-CDF5-4322-B1FC-9D187025627F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DF53B7C-CDF5-4322-B1FC-9D187025627F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DF53B7C-CDF5-4322-B1FC-9D187025627F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF21F3D7-2DB7-4724-99B5-D38F23F55B13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF21F3D7-2DB7-4724-99B5-D38F23F55B13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF21F3D7-2DB7-4724-99B5-D38F23F55B13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF21F3D7-2DB7-4724-99B5-D38F23F55B13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
