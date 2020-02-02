@@ -1,7 +1,5 @@
-﻿@{
-    Layout = null;
-}
-
+﻿@model IEnumerable<ai_betterbet.Model.Team>
+<! -- This sets operating model to a list of teams -->
 <!DOCTYPE html>
 
 <html>
@@ -10,6 +8,29 @@
     <title>AI BetterBet</title>
 </head>
 <body>
-    <h1>This is brand new betting app</h1>
+    <h1>This is brand new betting app.</h1>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2">
+                    <h2>For starters I am loaded up with some data</h2>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <h3>Name</h3>
+                </th>
+                <th>
+                    <h3>League</h3>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr><td>@item.Name</td><td>@item.League</td></tr>
+            }
+        </tbody>
+    </table>
 </body>
 </html>

@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ai_betterbet.Model;
+using ai_betterbet.Repositories;
+using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 
 namespace ai_betterbet.Controllers
 {
@@ -9,7 +12,12 @@ namespace ai_betterbet.Controllers
 
     public class HomeController : Controller
     {
-       
+        private readonly IRepository<Team> teamRepository;
+
+        public HomeController(IRepository<Team> teamRepository)
+        {
+            this.teamRepository = teamRepository;
+        }
 
         public static string MESSAGE_HEALTHY => "healthy";
 
@@ -19,7 +27,8 @@ namespace ai_betterbet.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Team> teams = teamRepository.GetAll();
+            return View(teams);
         }
 
         /**
