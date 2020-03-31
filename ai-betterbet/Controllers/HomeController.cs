@@ -39,7 +39,7 @@ namespace ai_betterbet.Controllers
         [Route("Tests")]
         public IActionResult Tests()
         {
-            return View();
+            return View("Tests");
         }
 
         /**

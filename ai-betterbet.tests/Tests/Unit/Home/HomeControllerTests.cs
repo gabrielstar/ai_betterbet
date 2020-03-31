@@ -64,6 +64,15 @@ namespace ai_betterbet_tests
             //assert
             Assert.IsType<ViewResult>(result);
         }
+        [Fact]
+        public void Test_ViewName_IsTest()
+        {
+            //arrange
+            //act
+            var result =  homeController.Tests() as ViewResult;
+            //assert
+            Assert.Equal("Tests",result.ViewName);
+        }
 
         [Fact]
         public void Ping_Returns_Healtcheck_Default_Message()
